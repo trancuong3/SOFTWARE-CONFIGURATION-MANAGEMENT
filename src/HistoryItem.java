@@ -1,8 +1,4 @@
-//Lớp này đại diện cho một mục lịch sử và chứa thông tin về phép tính.
-//
-//java
-//Sao chép
-//Chỉnh sửa
+
 public class HistoryItem {
     private double a, b, result;
     private String operation;
