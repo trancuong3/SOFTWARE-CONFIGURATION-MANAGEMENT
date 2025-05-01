@@ -1,24 +1,14 @@
-package caculator;
+//Lớp này sẽ khởi tạo và hiển thị giao diện ứng dụng.
+//
+//java
+//Sao chép
+//Chỉnh sửa
+import javax.swing.*;
 
-public class CalculatorLogic {
-    public double calculate(double a, double b, String operation) {
-        switch (operation) {
-            case "+":
-                return a + b;
-            case "-":
-                return a - b;
-            case "*":
-                return a * b;
-            case "/":
-                if (b != 0) return a / b;
-                else throw new ArithmeticException("Không thể chia cho 0");
-            case "^":
-                return Math.pow(a, b);
-            case "√":
-                if (a < 0) throw new ArithmeticException("Không thể tính căn bậc 2 của số âm");
-                return Math.sqrt(a);
-            default:
-                throw new IllegalArgumentException("Phép toán không hợp lệ");
-        }
+public class Main {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new CalculatorFrame().setVisible(true);
+        });
     }
 }
